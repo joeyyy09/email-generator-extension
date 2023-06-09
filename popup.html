@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LinkedIn Email Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        padding: 20px;
+        min-width: 500px;
+      }
+      h1 {
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .input-group {
+        display: flex;
+      }
+      .input-group .form-control {
+        flex: 1;
+        margin-right: 10px;
+      }
+      .input-group-append {
+        align-self: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>LinkedIn Email Generator</h1>
+      <form id="emailForm">
+        <div class="form-group">
+          <label for="linkInput">Import Link:</label>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="linkInput"
+              name="link"
+            />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-primary" id="generateButton">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="nameInput">Name:</label>
+          <input type="text" class="form-control" id="nameInput" name="name" />
+        </div>
+        <div class="form-group">
+          <label for="descriptionInput">Description:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="descriptionInput"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="companyInput">Company:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="companyInput"
+            name="company"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary" id="generateButton">
+          Generate Email
+        </button>
+      </form>
+      <div id="result"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
